@@ -77,12 +77,14 @@ const createPane = () => {
   folder.addInput(params, 'rows', { min: 2, max: 50, step: 1 });
   folder.addInput(params, 'scaleMin', { min: 1, max: 100 });
   folder.addInput(params, 'scaleMax', { min: 1, max: 100 });
+  pane.addSeparator();
   folder = pane.addFolder({ title: 'Noise' });
   folder.addInput(params, 'lineCap', { options: { butt: 'butt', round: 'round', square: 'square' }});
   folder.addInput(params, 'freq', { min: -0.01, max: 0.01 });
   folder.addInput(params, 'amp', { min: 0, max: 1 });
   folder.addInput(params, 'frame', { min: 0, max: 999 });
   folder.addInput(params, 'animate');
+  pane.addSeparator();
 }
 
 createPane();
